@@ -1,0 +1,10 @@
+Appetizers:
+{% if appetizer_list %}
+    <ul>
+    {% for apt in appetizer_list %}
+        {{apt.name}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{apt.price}}
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No appetizers are available.</p>
+{% endif %}
