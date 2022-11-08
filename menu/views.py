@@ -19,7 +19,7 @@ def sushi(request):
 
 
 def appetizer(request):
-    appetizer_list = Appetizers.object.all().order_by('name')
+    appetizer_list = Appetizers.objects.all().order_by('name')
     context = {
         'appetizer_list': appetizer_list
     }
