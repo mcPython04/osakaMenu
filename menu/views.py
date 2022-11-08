@@ -25,3 +25,19 @@ def appetizer(request):
     }
     return render(request, 'menu/aptzr.html', context)
 
+
+def hibachi(request):
+    hibachi_list = Hibachi.objects.all().order_by('price')
+    context = {
+        'hibachi_list': hibachi_list
+    }
+    return render(request, 'menu/hibachi.html', context)
+
+
+def kitchen(request):
+    kitchen_list = Kitchen.objects.all().order_by('price')
+    context = {
+        'kitchen_list': kitchen_list
+    }
+    return render(request, 'menu/kitchen.html', context)
+

@@ -1,0 +1,10 @@
+Kitchen:
+{% if kitchen_list %}
+    <ul>
+    {% for k in kitchen_list %}
+        {{k.name}} &nbsp&nbsp&nbsp&nbsp&nbsp; {{k.price}}
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No dishes are available.</p>
+{% endif %}

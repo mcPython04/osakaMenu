@@ -18,3 +18,20 @@ class Appetizers(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class Hibachi(models.Model):
+    name = models.CharField(max_length=25)
+    price = models.FloatField(default=0)
+
+    def __str__(self):
+        return self.name
+
+
+class Kitchen(models.Model):
+    name = models.CharField(max_length=25)
+    price = models.FloatField(default=0)
+
+    def __str__(self):
+        return self.name
+

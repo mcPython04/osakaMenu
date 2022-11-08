@@ -1,0 +1,10 @@
+Hibachi:
+{% if hibachi_list %}
+    <ul>
+    {% for h in hibachi_list %}
+        {{h.name}} &nbsp&nbsp&nbsp&nbsp&nbsp; {{h.price}}
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>No hibachis are available.</p>
+{% endif %}
