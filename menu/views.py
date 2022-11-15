@@ -41,3 +41,23 @@ def kitchen(request):
     }
     return render(request, 'menu/kitchen.html', context)
 
+
+def soup_salad(request):
+    return render(request, 'menu/soup_salad.html')
+
+
+def noodle_rice(request):
+    return render(request, 'menu/noodle_rice.html')
+
+
+def sushi_dinner(request):
+    return render(request, 'menu/sushi_dinner.html')
+
+
+def roll_combo(request):
+    return render(request, 'menu/roll_combo.html')
+
+
+def dessert(request):
+    return render(request, 'menu/dessert.html')
+

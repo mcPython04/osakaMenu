@@ -6,11 +6,15 @@
 <body>
     <h1>Osaka</h1>
     <h2>Menu</h2>
-    <a href="{% url 'appetizer' %}">Appetizer</a>
-    <a href="{% url 'sushi' %}">Sushi Bar</a>
-    <a href="{% url 'kitchen' %}">Kitchen</a>
-    <a href="{% url 'hibachi' %}">Hibachi</a>
-
+    <a href="{% url 'appetizer' %}"><button>Appetizer</button></a>
+    <a href="{% url 'soup_salad' %}"><button>Soup & Salad</button></a>
+    <a href="{% url 'roll_combo' %}"><button>Lunch Roll Combo</button></a>
+    <a href="{% url 'sushi' %}"><button>Sushi Rolls</button></a>
+    <a href="{% url 'hibachi' %}"><button>Hibachi</button></a>
+    <a href="{% url 'kitchen' %}"><button>Kitchen</button></a>
+    <a href="{% url 'noodle_rice' %}"><button>Noodle & Fried Rice</button></a>
+    <a href="{% url 'sushi_dinner' %}"><button>Dinner From Sushi Bar</button></a>
+    <a href="{% url 'dessert' %}"><button>Desserts</button></a>
     <br>
 
     {% block content %}
