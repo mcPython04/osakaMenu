@@ -9,8 +9,8 @@ def home(request):
 
 
 def sushi(request):
-    normal_sushi_list = Sushi.objects.filter(special=False).order_by('name')
-    special_sushi_list = Sushi.objects.filter(special=True).order_by('name')
+    normal_sushi_list = Roll.objects.filter(special=False).order_by('name')
+    special_sushi_list = Roll.objects.filter(special=True).order_by('name')
     context = {
         'normal_sushi_list': normal_sushi_list,
         'special_sushi_list': special_sushi_list,
@@ -19,7 +19,7 @@ def sushi(request):
 
 
 def appetizer(request):
-    appetizer_list = Appetizers.objects.all().order_by('name')
+    appetizer_list = Appetizer.objects.all().order_by('name')
     context = {
         'appetizer_list': appetizer_list
     }
@@ -27,17 +27,17 @@ def appetizer(request):
 
 
 def hibachi(request):
-    hibachi_list = Hibachi.objects.all().order_by('price')
+    hibachi_lunch_list = HibachiLunch.objects.all().order_by('price')
     context = {
-        'hibachi_list': hibachi_list
+        'hibachi_list': hibachi_lunch_list
     }
     return render(request, 'menu/hibachi.html', context)
 
 
 def kitchen(request):
-    kitchen_list = Kitchen.objects.all().order_by('price')
+    kitchen_dinner_list = KitchenDinner.objects.all().order_by('price')
     context = {
-        'kitchen_list': kitchen_list
+        'kitchen_list': kitchen_dinner_list
     }
     return render(request, 'menu/kitchen.html', context)
 

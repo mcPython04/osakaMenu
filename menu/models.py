@@ -2,7 +2,7 @@ from django.db import models
 
 
 # Create your models here.
-class Sushi(models.Model):
+class Roll(models.Model):
     name = models.CharField(max_length=50)
     description = models.TextField()
     price = models.FloatField()
@@ -12,7 +12,7 @@ class Sushi(models.Model):
         return self.name
 
 
-class Appetizers(models.Model):
+class SushiSashimi(models.Model):
     name = models.CharField(max_length=25)
     price = models.FloatField(default=0)
 
@@ -20,7 +20,16 @@ class Appetizers(models.Model):
         return self.name
 
 
-class Hibachi(models.Model):
+class Appetizer(models.Model):
+    name = models.CharField(max_length=25)
+    price = models.FloatField(default=0)
+    kitchen = models.BooleanField(default=False)    # Default is sushi
+
+    def __str__(self):
+        return self.name
+
+
+class Soup(models.Model):
     name = models.CharField(max_length=25)
     price = models.FloatField(default=0)
 
@@ -28,10 +37,81 @@ class Hibachi(models.Model):
         return self.name
 
 
-class Kitchen(models.Model):
+class Salad(models.Model):
     name = models.CharField(max_length=25)
     price = models.FloatField(default=0)
 
     def __str__(self):
         return self.name
 
+
+class HibachiLunch(models.Model):
+    name = models.CharField(max_length=25)
+    price = models.FloatField(default=0)
+
+    def __str__(self):
+        return self.name
+
+
+class HibachiDinner(models.Model):
+    name = models.CharField(max_length=25)
+    price = models.FloatField(default=0)
+
+    def __str__(self):
+        return self.name
+
+
+class HibachiKid(models.Model):
+    name = models.CharField(max_length=25)
+    price = models.FloatField(default=0)
+
+    def __str__(self):
+        return self.name
+
+
+class Noodle(models.Model):
+    name = models.CharField(max_length=25)
+    price = models.FloatField(default=0)
+
+    def __str__(self):
+        return self.name
+
+
+class FriedRice(models.Model):
+    name = models.CharField(max_length=25)
+    price = models.FloatField(default=0)
+
+    def __str__(self):
+        return self.name
+
+
+class SushiDinner(models.Model):
+    name = models.CharField(max_length=25)
+    price = models.FloatField(default=0)
+
+    def __str__(self):
+        return self.name
+
+
+class BentoBox(models.Model):
+    name = models.CharField(max_length=25)
+    price = models.FloatField(default=0)
+
+    def __str__(self):
+        return self.name
+
+
+class KitchenDinner(models.Model):
+    name = models.CharField(max_length=25)
+    price = models.FloatField(default=0)
+
+    def __str__(self):
+        return self.name
+
+
+class Dessert(models.Model):
+    name = models.CharField(max_length=25)
+    price = models.FloatField(default=0)
+
+    def __str__(self):
+        return self.name
