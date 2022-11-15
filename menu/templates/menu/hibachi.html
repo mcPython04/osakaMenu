@@ -1,10 +1,14 @@
-Hibachi:
-{% if hibachi_list %}
-    <ul>
-    {% for h in hibachi_list %}
-        {{h.name}} &nbsp&nbsp&nbsp&nbsp&nbsp; {{h.price}}
-    {% endfor %}
-    </ul>
-{% else %}
-    <p>No hibachis are available.</p>
-{% endif %}
+{% extends 'menu/base.html' %}
+
+{% block content %}
+    Hibachi:
+    {% if hibachi_list %}
+        <ul>
+        {% for h in hibachi_list %}
+            {{h.name}} &nbsp&nbsp&nbsp&nbsp&nbsp; {{h.price}}
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No hibachis are available.</p>
+    {% endif %}
+{% endblock %}

@@ -1,15 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-</head>
-<body>
-    <h1>Welcome to Osaka!</h1>
-    <h2>Menu</h2>
-    <a href="{% url 'appetizer' %}">Appetizer</a>
-    <a href="{% url 'sushi' %}">Sushi Bar</a>
-    <a href="{% url 'kitchen' %}">Kitchen</a>
-    <a href="{% url 'hibachi' %}">Hibachi</a>
+{% extends 'menu/base.html' %}
 
-</body>
-</html>
+{% block content %}
+    <h2>Welcome to the home page</h2>
+{% endblock %}

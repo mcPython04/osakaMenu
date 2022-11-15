@@ -1,29 +1,33 @@
-Sushi Menu:
-<br>
-<br>
+{% extends 'menu/base.html' %}
 
-Normal/Hand Rolls:
-{% if normal_sushi_list %}
-    <ul>
-    {% for sushi in normal_sushi_list %}
-        {{sushi.name}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{sushi.price}}
-        <p></p>
-        {{sushi.description}}
-    {% endfor %}
-    </ul>
-{% else %}
-    <p>No sushi are available.</p>
-{% endif %}
+{% block content %}
+    Sushi Menu:
+    <br>
+    <br>
 
-Special Rolls:
-{% if special_sushi_list %}
-    <ul>
-    {% for sushi in special_sushi_list %}
-        {{sushi.name}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{sushi.price}}
-        <p></p>
-        {{sushi.description}}
-    {% endfor %}
-    </ul>
-{% else %}
-    <p>No sushi are available.</p>
-{% endif %}
+    Normal/Hand Rolls:
+    {% if normal_sushi_list %}
+        <ul>
+        {% for sushi in normal_sushi_list %}
+            {{sushi.name}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{sushi.price}}
+            <p></p>
+            {{sushi.description}}
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No sushi are available.</p>
+    {% endif %}
+
+    Special Rolls:
+    {% if special_sushi_list %}
+        <ul>
+        {% for sushi in special_sushi_list %}
+            {{sushi.name}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{sushi.price}}
+            <p></p>
+            {{sushi.description}}
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No sushi are available.</p>
+    {% endif %}
+{% endblock %}
