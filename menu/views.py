@@ -45,7 +45,13 @@ def kitchen(request):
 
 
 def soup_salad(request):
-    return render(request, 'menu/soup_salad.html')
+    soup_list = Soup.objects.all().order_by('price')
+    salad_list = Salad.objects.all().order_by('price')
+    context = {
+        'soup_list': soup_list,
+        'salad_list': salad_list,
+    }
+    return render(request, 'menu/soup_salad.html', context)
 
 
 def noodle_rice(request):

@@ -1,5 +1,25 @@
 {% extends 'menu/base.html' %}
 
 {% block content %}
-    Soup Salad Page
+    Soup:
+    {% if soup_list %}
+        <ul>
+            {% for soup in soup_list %}
+                {{soup.name}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{soup.price}}
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No soups are avaliable.</p>
+    {% endif %}
+
+    Salad:
+    {% if salad_list %}
+        <ul>
+            {% for salad in salad_list %}
+                {{salad.name}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{salad.price}}
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No salads are avaliable.</p>
+    {% endif %}
 {% endblock %}
