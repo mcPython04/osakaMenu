@@ -1,5 +1,14 @@
 {% extends 'menu/base.html' %}
 
 {% block content %}
-    Dessert Page
+    Dessert:
+    {% if dessert_list %}
+        <ul>
+        {% for d in dessert_list %}
+            {{d.name}} &nbsp&nbsp&nbsp&nbsp&nbsp; {{d.price}}
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No dishes are available.</p>
+    {% endif %}
 {% endblock %}

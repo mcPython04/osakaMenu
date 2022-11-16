@@ -7,6 +7,7 @@ class Roll(models.Model):
     description = models.TextField()
     price = models.FloatField()
     special = models.BooleanField(default=False)
+    combo = models.BooleanField(default=False)
 
     def __str__(self):
         return self.name
@@ -88,6 +89,7 @@ class FriedRice(models.Model):
 class SushiDinner(models.Model):
     name = models.CharField(max_length=25)
     price = models.FloatField(default=0)
+    description = models.TextField(default='')
 
     def __str__(self):
         return self.name

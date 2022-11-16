@@ -73,13 +73,25 @@ def noodle_rice(request):
 
 
 def sushi_dinner(request):
-    return render(request, 'menu/sushi_dinner.html')
+    dinner_list = SushiDinner.objects.all().order_by('price')
+    context = {
+        'dinner_list': dinner_list,
+    }
+    return render(request, 'menu/sushi_dinner.html', context)
 
 
 def roll_combo(request):
-    return render(request, 'menu/roll_combo.html')
+    roll_list = Roll.objects.filter(combo=True).order_by('name')
+    context = {
+        'roll_list': roll_list
+    }
+    return render(request, 'menu/roll_combo.html', context)
 
 
 def dessert(request):
-    return render(request, 'menu/dessert.html')
+    dessert_list = Dessert.objects.all().order_by('price')
+    context = {
+        'dessert_list': dessert_list,
+    }
+    return render(request, 'menu/dessert.html', context)
 

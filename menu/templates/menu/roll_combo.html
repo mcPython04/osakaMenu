@@ -1,5 +1,17 @@
 {% extends 'menu/base.html' %}
 
 {% block content %}
-    Lunch Roll Combo Page
+    Lunch Roll Combo
+    <p>Make your own combo!!! Comes with soup and salad!!!</p>
+
+    {% if roll_list %}
+        <ul>
+        {% for r in roll_list %}
+            {{r.name}} &nbsp&nbsp&nbsp&nbsp&nbsp
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No dishes are available.</p>
+    {% endif %}
+
 {% endblock %}

@@ -1,5 +1,14 @@
 {% extends 'menu/base.html' %}
 
 {% block content %}
-    Sushi Dinner Page
+    Dinner From Sushi Bar:
+    {% if dinner_list %}
+        <ul>
+        {% for d in dinner_list %}
+            {{d.name}} &nbsp&nbsp&nbsp&nbsp&nbsp; {{d.price}}
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No dishes are available.</p>
+    {% endif %}
 {% endblock %}
