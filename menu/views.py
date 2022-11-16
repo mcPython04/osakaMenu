@@ -31,9 +31,13 @@ def appetizer(request):
 
 
 def hibachi(request):
-    hibachi_lunch_list = HibachiLunch.objects.all().order_by('price')
+    lunch_list = HibachiLunch.objects.all().order_by('price')
+    dinner_list = HibachiDinner.objects.all().order_by('price')
+    kid_list = HibachiKid.objects.all().order_by('price')
     context = {
-        'hibachi_list': hibachi_lunch_list
+        'lunch_list': lunch_list,
+        'dinner_list': dinner_list,
+        'kid_list': kid_list,
     }
     return render(request, 'menu/hibachi.html', context)
 
