@@ -19,9 +19,11 @@ def sushi(request):
 
 
 def appetizer(request):
-    appetizer_list = Appetizer.objects.all().order_by('name')
+    appetizer_sushi_list = Appetizer.objects.filter(kitchen=False).order_by('name')
+    appetizer_kitchen_list = Appetizer.objects.filter(kitchen=True).order_by('name')
     context = {
-        'appetizer_list': appetizer_list
+        'appetizer_sushi_list': appetizer_sushi_list,
+        'appetizer_kitchen_list': appetizer_kitchen_list,
     }
     return render(request, 'menu/aptzr.html', context)
 

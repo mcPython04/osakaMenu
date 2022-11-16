@@ -2,10 +2,11 @@
 
 {% block content %}
     Appetizers From the Kitchen:
-    {% if appetizer_list %}
+    {% if appetizer_kitchen_list %}
         <ul>
-        {% for apt in appetizer_list %}
+        {% for apt in appetizer_kitchen_list %}
             {{apt.name}} &nbsp&nbsp&nbsp&nbsp&nbsp; {{apt.price}}
+            <p></p>
         {% endfor %}
         </ul>
     {% else %}
@@ -13,5 +14,14 @@
     {% endif %}
 
     Appetizers From Sushi Bar:
-    None for now.
+    {% if appetizer_sushi_list %}
+        <ul>
+        {% for apt in appetizer_sushi_list %}
+            {{apt.name}} &nbsp&nbsp&nbsp&nbsp&nbsp; {{apt.price}}
+            <p></p>
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No appetizers are available.</p>
+    {% endif %}
 {% endblock %}
