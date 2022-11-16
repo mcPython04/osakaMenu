@@ -11,9 +11,11 @@ def home(request):
 def sushi(request):
     normal_sushi_list = Roll.objects.filter(special=False).order_by('name')
     special_sushi_list = Roll.objects.filter(special=True).order_by('name')
+    sushi_sashimi_list = SushiSashimi.objects.all().order_by('name')
     context = {
         'normal_sushi_list': normal_sushi_list,
         'special_sushi_list': special_sushi_list,
+        'sushi_sashimi_list': sushi_sashimi_list,
     }
     return render(request, 'menu/sushi.html', context)
 

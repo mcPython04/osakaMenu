@@ -1,7 +1,6 @@
 {% extends 'menu/base.html' %}
 
 {% block content %}
-    Sushi Menu:
     <br>
     <br>
 
@@ -25,6 +24,18 @@
             {{sushi.name}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{sushi.price}}
             <p></p>
             {{sushi.description}}
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No sushi are available.</p>
+    {% endif %}
+
+    Sushi & Sashimi:
+    {% if sushi_sashimi_list %}
+        <ul>
+        {% for sushi in sushi_sashimi_list %}
+            {{sushi.name}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{sushi.price}}
+            <p></p>
         {% endfor %}
         </ul>
     {% else %}
