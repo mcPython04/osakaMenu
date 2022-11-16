@@ -63,7 +63,13 @@ def soup_salad(request):
 
 
 def noodle_rice(request):
-    return render(request, 'menu/noodle_rice.html')
+    noodle_list = Noodle.objects.all().order_by('price')
+    rice_list = FriedRice.objects.all().order_by('price')
+    context = {
+        'noodle_list': noodle_list,
+        'rice_list': rice_list,
+    }
+    return render(request, 'menu/noodle_rice.html', context)
 
 
 def sushi_dinner(request):

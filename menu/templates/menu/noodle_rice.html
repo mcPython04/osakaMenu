@@ -1,5 +1,25 @@
 {% extends 'menu/base.html' %}
 
 {% block content %}
-    Noodle Rice Page
+    Noodle:
+    {% if noodle_list %}
+        <ul>
+        {% for n in noodle_list %}
+            {{n.name}} &nbsp&nbsp&nbsp&nbsp&nbsp; {{n.price}}
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No dishes are available.</p>
+    {% endif %}
+
+    Fried Rice:
+    {% if rice_list %}
+        <ul>
+        {% for r in rice_list %}
+            {{r.name}} &nbsp&nbsp&nbsp&nbsp&nbsp; {{r.price}}
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No dishes are available.</p>
+    {% endif %}
 {% endblock %}
