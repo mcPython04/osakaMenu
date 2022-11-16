@@ -1,11 +1,22 @@
 {% extends 'menu/base.html' %}
 
 {% block content %}
-    Kitchen:
-    {% if kitchen_list %}
+    Bento Box (Lunch):
+    {% if box_list %}
         <ul>
-        {% for k in kitchen_list %}
-            {{k.name}} &nbsp&nbsp&nbsp&nbsp&nbsp; {{k.price}}
+        {% for b in box_list %}
+            {{b.name}} &nbsp&nbsp&nbsp&nbsp&nbsp; {{b.price}}
+        {% endfor %}
+        </ul>
+    {% else %}
+        <p>No dishes are available.</p>
+    {% endif %}
+
+    Dinner from the Kitchen:
+    {% if dinner_list %}
+        <ul>
+        {% for d in dinner_list %}
+            {{d.name}} &nbsp&nbsp&nbsp&nbsp&nbsp; {{d.price}}
         {% endfor %}
         </ul>
     {% else %}

@@ -43,9 +43,11 @@ def hibachi(request):
 
 
 def kitchen(request):
-    kitchen_dinner_list = KitchenDinner.objects.all().order_by('price')
+    box_list = BentoBox.objects.all().order_by('price')
+    dinner_list = KitchenDinner.objects.all().order_by('price')
     context = {
-        'kitchen_list': kitchen_dinner_list
+        'dinner_list': dinner_list,
+        'box_list': box_list,
     }
     return render(request, 'menu/kitchen.html', context)
 
