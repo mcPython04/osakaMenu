@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Osaka Japanese Sushi and Hibachi</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'menu/style.css' %}">
+</head>
+<body>
+    <div class="navbar">
+        <div class="name">Osaka</div>
+        <ul>
+            <li><a href="{% url 'home' %}">Home</a></li>
+            <li><a href="{% url 'menu' %}">Menu</a></li>
+        </ul>
+    </div>
+    {% block content %}
+    {% endblock %}
+</body>
+</html>

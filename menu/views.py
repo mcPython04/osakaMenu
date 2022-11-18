@@ -95,3 +95,6 @@ def dessert(request):
     }
     return render(request, 'menu/dessert.html', context)
 
+
+def menu(request):
+    return render(request, 'menu/menu_nav.html')
