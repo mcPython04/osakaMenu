@@ -7,17 +7,20 @@
     <link rel="stylesheet" href="{% static 'menu/style.css' %}">
 </head>
 <body>
-    <h1>Osaka</h1>
-    <h2>Menu</h2>
-    <a href="{% url 'appetizer' %}"><button>Appetizer</button></a>
-    <a href="{% url 'soup_salad' %}"><button>Soup & Salad</button></a>
-    <a href="{% url 'roll_combo' %}"><button>Lunch Roll Combo</button></a>
-    <a href="{% url 'sushi' %}"><button>Sushi Rolls</button></a>
-    <a href="{% url 'hibachi' %}"><button>Hibachi</button></a>
-    <a href="{% url 'kitchen' %}"><button>Kitchen</button></a>
-    <a href="{% url 'noodle_rice' %}"><button>Noodle & Fried Rice</button></a>
-    <a href="{% url 'sushi_dinner' %}"><button>Dinner From Sushi Bar</button></a>
-    <a href="{% url 'dessert' %}"><button>Desserts</button></a>
+    <div class="menu-nav">
+        <ul>
+            <li><a href="{% url 'appetizer' %}">Appetizer</a></li>
+            <li><a href="{% url 'soup_salad' %}">Soup & Salad</a></li>
+            <li><a href="{% url 'roll_combo' %}">Lunch Roll Combo</a></li>
+            <li><a href="{% url 'sushi' %}">Sushi Rolls</a></li>
+            <li><a href="{% url 'hibachi' %}">Hibachi</a></li>
+            <li><a href="{% url 'kitchen' %}">Kitchen</a></li>
+            <li><a href="{% url 'noodle_rice' %}">Noodle & Fried Rice</a></li>
+            <li><a href="{% url 'sushi_dinner' %}">Dinner From Sushi Bar</a></li>
+            <li><a href="{% url 'dessert' %}">Desserts</a></li>
+        </ul>
+    </div>
+
     <br>
 
     {% block content %}

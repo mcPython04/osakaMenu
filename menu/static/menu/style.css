@@ -1,13 +1,15 @@
+*{
+    background-color: black;
+}
+
+body {
+    color: white;
+}
 .navbar{
-    width: 85%;
     margin: auto;
-    padding: 35px 0;
     display: flex;
     align-items: center;
     justify-content: space-between;
-}
-.name {
-    color: blue;
 }
 .navbar ul li{
     list-style: none;
@@ -16,6 +18,17 @@
 }
 .navbar ul li a{
     text-decoration: none;
-    color: #000;
+    color: #fff;
+    text-transform: uppercase;
+}
+
+.menu-nav ul li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 10px;
+}
+.menu-nav ul li a{
+    text-decoration: none;
+    color: #fff;
     text-transform: uppercase;
 }
