@@ -4,7 +4,7 @@ from django.db import models
 # Create your models here.
 class Roll(models.Model):
     name = models.CharField(max_length=50)
-    description = models.TextField()
+    description = models.TextField(blank=True)
     price = models.FloatField()
     special = models.BooleanField(default=False)
     combo = models.BooleanField(default=False)

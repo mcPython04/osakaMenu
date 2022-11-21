@@ -8,9 +8,12 @@
     {% if normal_sushi_list %}
         <ul>
         {% for sushi in normal_sushi_list %}
-            {{sushi.name}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{sushi.price}}
+            <b>{{sushi.name}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{sushi.price}}</b>
             <p></p>
-            {{sushi.description}}
+
+            <div class="description">{{sushi.description}}</div>
+
+            <p></p>
         {% endfor %}
         </ul>
     {% else %}
@@ -24,6 +27,7 @@
             {{sushi.name}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{sushi.price}}
             <p></p>
             {{sushi.description}}
+            <p></p>
         {% endfor %}
         </ul>
     {% else %}
