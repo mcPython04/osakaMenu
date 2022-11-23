@@ -1,14 +1,25 @@
 {% extends 'menu/menu_nav.html' %}
 
 {% block content %}
-    Dessert:
+<div class="content">
+    <div class="content-title">
+        Dessert:
+    </div>
     {% if dessert_list %}
         <ul>
         {% for d in dessert_list %}
-            {{d.name}} &nbsp&nbsp&nbsp&nbsp&nbsp; {{d.price}}
+            <div class="container">
+                <span class="name">
+                    {{d.name}}
+                </span>
+                <span class="price">
+                    {{d.price}}
+                </span>
+            </div>
         {% endfor %}
         </ul>
     {% else %}
         <p>No dishes are available.</p>
     {% endif %}
+</div>
 {% endblock %}
