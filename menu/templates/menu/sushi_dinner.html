@@ -1,14 +1,21 @@
 {% extends 'menu/menu_nav.html' %}
 
 {% block content %}
-    Dinner From Sushi Bar:
-    {% if dinner_list %}
-        <ul>
-        {% for d in dinner_list %}
-            {{d.name}} &nbsp&nbsp&nbsp&nbsp&nbsp; {{d.price}}
-        {% endfor %}
-        </ul>
-    {% else %}
-        <p>No dishes are available.</p>
-    {% endif %}
+    <div class="content">
+        <div class="content-title">
+            Dinner From Sushi Bar
+        </div>
+        {% if dinner_list %}
+            <ul>
+            {% for d in dinner_list %}
+                <div class="container">
+                    <span class="name">{{d.name}}</span>
+                    <span class="price">{{d.price}}</span>
+                </div>
+            {% endfor %}
+            </ul>
+        {% else %}
+            <p>No dishes are available.</p>
+        {% endif %}
+    </div>
 {% endblock %}
