@@ -1,11 +1,21 @@
 {% extends 'menu/menu_nav.html' %}
 
 {% block content %}
-    Soup:
+<div class="content">
+    <div class="content-title">
+        Soup
+    </div>
     {% if soup_list %}
         <ul>
             {% for soup in soup_list %}
-                {{soup.name}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{soup.price}}
+                <div class="container">
+                    <span class="name">
+                        {{soup.name}}
+                    </span>
+                    <span class="price">
+                        {{soup.price}}
+                    </span>
+                </div>
                 <p></p>
             {% endfor %}
         </ul>
@@ -13,15 +23,25 @@
         <p>No soups are avaliable.</p>
     {% endif %}
 
-    Salad:
+    <div class="content-title">
+        Salad
+    </div>
     {% if salad_list %}
         <ul>
             {% for salad in salad_list %}
-                {{salad.name}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{salad.price}}
+                <div class="container">
+                    <span class="name">
+                        {{salad.name}}
+                    </span>
+                    <span class="price">
+                        {{salad.price}}
+                    </span>
+                </div>
                 <p></p>
             {% endfor %}
         </ul>
     {% else %}
         <p>No salads are avaliable.</p>
     {% endif %}
+</div>
 {% endblock %}
