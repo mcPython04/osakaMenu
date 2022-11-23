@@ -1,36 +1,53 @@
 {% extends 'menu/menu_nav.html' %}
 
 {% block content %}
-    Hibachi Lunch:
-    {% if lunch_list %}
-        <ul>
-        {% for h in lunch_list %}
-            {{h.name}} &nbsp&nbsp&nbsp&nbsp&nbsp; {{h.price}}
-        {% endfor %}
-        </ul>
-    {% else %}
-        <p>No hibachis are available.</p>
-    {% endif %}
+    <div class="content">
+        <div class="content-title">
+            Hibachi Lunch
+        </div>
+        {% if lunch_list %}
+            <ul>
+            {% for h in lunch_list %}
+                <div class="container">
+                    <span class="name">{{h.name}}</span>
+                    <span class="price">{{h.price}}</span>
+                </div>
+            {% endfor %}
+            </ul>
+        {% else %}
+            <p>No hibachis are available.</p>
+        {% endif %}
 
-    Hibachi Dinner:
-    {% if dinner_list %}
-        <ul>
-        {% for h in dinner_list %}
-            {{h.name}} &nbsp&nbsp&nbsp&nbsp&nbsp; {{h.price}}
-        {% endfor %}
-        </ul>
-    {% else %}
-        <p>No hibachis are available.</p>
-    {% endif %}
+        <div class="content-title">
+            Hibachi Dinner
+        </div>
+        {% if dinner_list %}
+            <ul>
+            {% for h in dinner_list %}
+                <div class="container">
+                    <span class="name">{{h.name}}</span>
+                    <span class="price">{{h.price}}</span>
+                </div>
+            {% endfor %}
+            </ul>
+        {% else %}
+            <p>No hibachis are available.</p>
+        {% endif %}
 
-    Hibachi Kid:
-    {% if kid_list %}
-        <ul>
-        {% for h in kid_list %}
-            {{h.name}} &nbsp&nbsp&nbsp&nbsp&nbsp; {{h.price}}
-        {% endfor %}
-        </ul>
-    {% else %}
-        <p>No hibachis are available.</p>
-    {% endif %}
+        <div class="content-title">
+            Hibachi Kid
+        </div>
+        {% if kid_list %}
+            <ul>
+            {% for h in kid_list %}
+                <div class="container">
+                    <span class="name">{{h.name}}</span>
+                    <span class="price">{{h.price}}</span>
+                </div>
+            {% endfor %}
+            </ul>
+        {% else %}
+            <p>No hibachis are available.</p>
+        {% endif %}
+    </div>
 {% endblock %}
