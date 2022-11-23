@@ -1,25 +1,45 @@
 {% extends 'menu/menu_nav.html' %}
 
 {% block content %}
-    Noodle:
-    {% if noodle_list %}
-        <ul>
-        {% for n in noodle_list %}
-            {{n.name}} &nbsp&nbsp&nbsp&nbsp&nbsp; {{n.price}}
-        {% endfor %}
-        </ul>
-    {% else %}
-        <p>No dishes are available.</p>
-    {% endif %}
+<div class="content" xmlns="http://www.w3.org/1999/html">
+        <div class="content-title">
+            Noodle:
+        </div>
+        {% if noodle_list %}
+            <ul>
+            {% for n in noodle_list %}
+                <div class="container">
+                    <span class="name">
+                        {{n.name}}
+                    </span>
+                    <span class="price">
+                        {{n.price}}
+                    </span>
+                </div>
+            {% endfor %}
+            </ul>
+        {% else %}
+            <p>No dishes are available.</p>
+        {% endif %}
 
-    Fried Rice:
-    {% if rice_list %}
-        <ul>
-        {% for r in rice_list %}
-            {{r.name}} &nbsp&nbsp&nbsp&nbsp&nbsp; {{r.price}}
-        {% endfor %}
-        </ul>
-    {% else %}
-        <p>No dishes are available.</p>
-    {% endif %}
+        <div class="content-title">
+            Fried Rice:
+        </div>
+        {% if rice_list %}
+            <ul>
+            {% for r in rice_list %}
+                <div class="container">
+                    <span class="name">
+                        {{r.name}}
+                    </span>
+                    <span class="price">
+                        {{r.price}}
+                    </span>
+                </div>
+            {% endfor %}
+            </ul>
+        {% else %}
+            <p>No dishes are available.</p>
+        {% endif %}
+    </div>
 {% endblock %}
