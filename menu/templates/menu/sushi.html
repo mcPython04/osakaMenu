@@ -10,11 +10,13 @@
         <ul>
         {% for sushi in normal_sushi_list %}
             <div class="container">
-                <span class="name">{{sushi.name}}</span> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <span class="price">{{sushi.price}}</span>
+                <span class="name">{{sushi.name}}</span>
+                <span class="price">{{sushi.price}}</span>
             </div>
-            <p></p>
 
-            <div class="description">{{sushi.description}}</div>
+            <div class="description">
+                {{sushi.description}}
+            </div>
 
             <p></p>
         {% endfor %}
@@ -32,8 +34,9 @@
                 <span class="price">{{sushi.price}}</span>
             </div>
 
-            <p></p>
-            <div class="description">{{sushi.description}}</div>
+            <div class="description">
+                {{sushi.description}}
+            </div>
             <p></p>
         {% endfor %}
         </ul>

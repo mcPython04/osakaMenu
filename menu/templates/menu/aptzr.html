@@ -1,11 +1,15 @@
 {% extends 'menu/menu_nav.html' %}
 
 {% block content %}
-    Appetizers From the Kitchen:
+<div class="content">
+    <div class="content-title">Appetizers From the Kitchen:</div>
     {% if appetizer_kitchen_list %}
         <ul>
         {% for apt in appetizer_kitchen_list %}
-            {{apt.name}} &nbsp&nbsp&nbsp&nbsp&nbsp; {{apt.price}}
+            <div class="container">
+                <span class="name">{{apt.name}}</span>
+                <span class="price">{{apt.price}}</span>
+            </div>
             <p></p>
         {% endfor %}
         </ul>
@@ -13,15 +17,19 @@
         <p>No appetizers are available.</p>
     {% endif %}
 
-    Appetizers From Sushi Bar:
+    <div class="content-title">Appetizers From Sushi Bar:</div>
     {% if appetizer_sushi_list %}
         <ul>
         {% for apt in appetizer_sushi_list %}
-            {{apt.name}} &nbsp&nbsp&nbsp&nbsp&nbsp; {{apt.price}}
+            <div class="container">
+                <span class="name">{{apt.name}}</span>
+                <span class="price">{{apt.price}}</span>
+            </div>
             <p></p>
         {% endfor %}
         </ul>
     {% else %}
         <p>No appetizers are available.</p>
     {% endif %}
+</div>
 {% endblock %}
