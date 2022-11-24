@@ -47,7 +47,7 @@ class Salad(models.Model):
 
 
 class HibachiLunch(models.Model):
-    name = models.CharField(max_length=25)
+    name = models.CharField(max_length=40)
     price = models.FloatField(default=0)
 
     def __str__(self):
@@ -55,7 +55,7 @@ class HibachiLunch(models.Model):
 
 
 class HibachiDinner(models.Model):
-    name = models.CharField(max_length=25)
+    name = models.CharField(max_length=40)
     price = models.FloatField(default=0)
 
     def __str__(self):
@@ -104,14 +104,6 @@ class BentoBox(models.Model):
 
 
 class KitchenDinner(models.Model):
-    name = models.CharField(max_length=25)
-    price = models.FloatField(default=0)
-
-    def __str__(self):
-        return self.name
-
-
-class Dessert(models.Model):
     name = models.CharField(max_length=25)
     price = models.FloatField(default=0)
 

@@ -88,13 +88,5 @@ def roll_combo(request):
     return render(request, 'menu/roll_combo.html', context)
 
 
-def dessert(request):
-    dessert_list = Dessert.objects.all().order_by('price')
-    context = {
-        'dessert_list': dessert_list,
-    }
-    return render(request, 'menu/dessert.html', context)
-
-
 def menu(request):
     return render(request, 'menu/menu_nav.html')
