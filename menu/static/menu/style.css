@@ -7,7 +7,9 @@ body {
     color: white;
 }
 .navbar{
-    margin: auto;
+    margin-left: auto;
+    margin-right: auto;
+    width: 1200px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -20,12 +22,16 @@ body {
 .navbar ul li a{
     text-decoration: none;
     color: #fff;
-    text-transform: uppercase;
-    font-size: 1.7em;
+    font-size: 1.5em;
     font-weight: bold;
 }
 
+.navbar a:hover {
+  border-bottom: 3px solid red;
+}
+
 .menu-nav {
+    margin-top: 30px;
     text-align: center;
 }
 
@@ -38,9 +44,14 @@ body {
 .menu-nav ul li a{
     text-decoration: none;
     color: #fff;
-    text-transform: uppercase;
     font-size: 1.5em;
+    font-weight: bold;
 }
+
+.menu-nav a:hover{
+    border-bottom: 3px solid red;
+}
+
 .description {
     font-size: 1.4em;
     font-style: italic;
@@ -52,7 +63,6 @@ body {
 }
 .content-title {
     text-align: center;
-    text-transform: uppercase;
     font-weight: bold;
     font-size: 2.1em;
     color: red;
